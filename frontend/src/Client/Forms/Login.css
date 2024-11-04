@@ -1,0 +1,83 @@
+/* Login.css */
+
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #f2f7f5; /* világos háttér */
+}
+
+.container {
+  width: 350px;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  text-align: center;
+}
+
+h1 {
+  color: #333;
+  font-size: 24px;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.input-box {
+  margin: 10px 0;
+  position: relative;
+}
+
+.input-box input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+.input-box input:focus {
+  border-color: #6db583; /* zöldes árnyalat */
+  outline: none;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 15px;
+  background-color: #6db583; /* zöld gomb */
+  border: none;
+  border-radius: 8px;
+  color: #fff;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #5ca672;
+}
+
+.register-link {
+  margin-top: 15px;
+}
+
+.register-link p {
+  font-size: 14px;
+  color: #666;
+}
+
+.register-link a {
+  color: #6db583;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.register-link a:hover {
+  color: #5ca672;
+  text-decoration: underline;
+}
