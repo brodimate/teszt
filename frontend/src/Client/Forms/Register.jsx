@@ -3,8 +3,10 @@ import { useState } from "react";
 import React from 'react';
 import './Register.css';
 import axios from "axios"
+import { useNavigate } from 'react-router-dom';
 
 const Register = () => {
+    const navigate = useNavigate();
 
     const [inputs, setInputs] = useState({
         username:"",
@@ -12,7 +14,7 @@ const Register = () => {
         password:"",
         name:"",
     });
-    const [err, setErr] = useState(false);
+    const [err, setErr] = useState(null);
 
     const handleChange = e => {
         setInputs(prev => ({ ...prev, [e.target.name]: e.target.value }));
@@ -25,7 +27,7 @@ const Register = () => {
         try{
             await axios.post("http://localhost:8800/backend/auth/register", inputs)
         }catch(err){
-            setErr(true)
+            setErr(err.response.data)
         }
     }
     
@@ -47,10 +49,10 @@ const Register = () => {
                 <div className="input-box">
                     <input placeholder="Name" name="name" onChange={handleChange}/>
                 </div>
-                {/*err && err*/}
+                {err && err}
                 <button onClick={handleClick}>Register</button>
                 <div className="login-link">
-                    <p>Already have an account? <a href="#">Login</a></p>
+                    <p>Already have an account? <button onClick={() => navigate('/login')}>Login</button></p>
                 </div>
             </form>
         </div>
