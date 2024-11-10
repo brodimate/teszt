@@ -6,8 +6,14 @@ import postRoutes from "./routes/posts.js";
 import cors from "cors";
 import cookieParser from "cookie-parser";
 
+app.use((req,res,next)=>{
+    res.header("Acces-Control-Allow-Credentials", true)
+    next()
+})
 app.use(express.json())
-app.use(cors())
+app.use(cors({
+    origin: "http://localhost:3000/login"
+}))
 app.use(cookieParser())
 
 

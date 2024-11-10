@@ -1,83 +1,78 @@
-/* Register.css */
-/* Ugyanaz a stílus alkalmazható, mint a Login.css esetében */
-body {
-  font-family: Arial, sans-serif;
+/* Login.css */
+
+.register {
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   height: 100vh;
-  margin: 0;
-  background-color: #f2f7f5;
+  width: 100%;
 }
 
-.container {
-  width: 350px;
-  padding: 20px;
-  background-color: #fff;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-  border-radius: 10px;
+.card {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  padding: 40px;
+  width: 100%;
+  max-width: 400px; /* A szélesség növelése 800px-re */
+}
+
+.center {
   text-align: center;
 }
 
 h1 {
-  color: #333;
+  margin-bottom: 24px;
   font-size: 24px;
-  margin-bottom: 20px;
-  font-weight: bold;
+  color: #333;
 }
 
-.input-box {
-  margin: 10px 0;
-  position: relative;
+form {
+  display: flex;
+  flex-direction: column;
 }
 
-.input-box input {
-  width: 100%;
+input {
   padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  box-sizing: border-box;
-  font-size: 16px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
 }
 
-.input-box input:focus {
-  border-color: #6db583;
+input:focus {
+  border-color: #007bff;
   outline: none;
 }
 
 button {
-  width: 100%;
-  padding: 12px;
-  margin-top: 15px;
-  background-color: #6db583;
+  background-color: #007bff;
+  color: white;
   border: none;
-  border-radius: 8px;
-  color: #fff;
-  font-size: 18px;
+  border-radius: 4px;
+  padding: 12px;
+  margin-top: 10px;
   cursor: pointer;
+  font-size: 14px;
   transition: background-color 0.3s;
 }
 
 button:hover {
-  background-color: #5ca672;
+  background-color: #0056b3;
 }
 
-.login-link {
-  margin-top: 15px;
-}
-
-.login-link p {
+span {
+  display: block;
+  margin-top: 20px;
   font-size: 14px;
-  color: #666;
+  color: #555;
 }
 
-.login-link a {
-  color: #6db583;
-  text-decoration: none;
-  font-weight: bold;
+button:nth-of-type(2) {
+  background-color: #6c757d;
+  margin-top: 10px;
 }
 
-.login-link a:hover {
-  color: #5ca672;
-  text-decoration: underline;
+button:nth-of-type(2):hover {
+  background-color: #5a6268;
 }
