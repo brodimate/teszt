@@ -1,0 +1,72 @@
+/* NavBar.css */
+
+.navBar {
+  display: flex;
+  align-items: center; /* Igazítja az elemeket függőlegesen középre */
+  justify-content: space-between;
+  padding: 10px 20px;
+  background-color: white;
+  border-bottom: 1px solid #e0e0e0;
+  max-height: 30px;
+  position: sticky;
+  top: 0;
+}
+
+.left-navBar {
+  display: flex;
+  align-items: center; /* Középre igazítja a szöveget és egyéb elemeket */
+}
+
+.left-navBar span {
+  font-size: 20px;
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+.center-navBar {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  max-height: 30px;
+}
+
+.search {
+  display: flex;
+  align-items: center; /* Középre igazítja a keresősáv elemeit */
+  background-color: #f1f1f1;
+  border-radius: 20px;
+  padding: 5px 10px;
+  max-width: 400px;
+  width: 100%;
+}
+
+.search input {
+  border: none;
+  outline: none;
+  background: none;
+  margin-left: 5px;
+  flex: 1;
+}
+
+.right-navBar {
+  display: flex;
+  align-items: center; /* Középre igazítja az elemeket */
+}
+
+.right-navBar .user {
+  display: flex;
+  align-items: center;
+  margin-left: 15px;
+}
+
+.right-navBar .user img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+
+.right-navBar .user span {
+  font-size: 14px;
+  font-weight: 500;
+}

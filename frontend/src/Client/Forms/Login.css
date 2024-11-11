@@ -1,5 +1,3 @@
-/* Login.css */
-
 .login {
   display: flex;
   justify-content: center;
@@ -17,7 +15,7 @@
   max-width: 400px; /* A szélesség növelése 800px-re */
 }
 
-.center {
+.center-login {
   text-align: center;
 }
 
@@ -27,12 +25,12 @@ h1 {
   color: #333;
 }
 
-form {
+.login-input {
   display: flex;
   flex-direction: column;
 }
 
-input {
+.login-input input {
   padding: 12px;
   margin: 10px 0;
   border: 1px solid #ddd;
@@ -40,7 +38,7 @@ input {
   font-size: 14px;
 }
 
-input:focus {
+.login-input input:focus {
   border-color: #007bff;
   outline: none;
 }
@@ -61,7 +59,7 @@ button:hover {
   background-color: #0056b3;
 }
 
-span {
+.center-login span {
   display: block;
   margin-top: 20px;
   font-size: 14px;

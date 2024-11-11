@@ -5,14 +5,18 @@ import {
   RouterProvider,
   Route,
   Outlet,
+  Navigate,
 } from "react-router-dom";
 import NavBar from "./Components/navbar/NavBar.jsx";
 import RightBar from "./Components/rightBar/RightBar.jsx";
 import LeftBar from "./Components/leftBar/LeftBar.jsx";
 import Home from "./Client/Forms/Home.jsx";
 import Profile from "./Client/Forms/Profile.jsx";
+import { useContext } from "react";
+import { AuthContext } from "./Client/Context/authContext.js";
 
 function App() {
+  const {currentUser} = useContext(AuthContext);
 
   const Layout = () => {
     return (
@@ -20,17 +24,31 @@ function App() {
         <NavBar/>
         <div style={{display:"flex"}}>
           <LeftBar/>
+          <div style={{flex: 6}}>
           <Outlet/>
+          </div>
           <RightBar/>
         </div>
       </div>
     )
   }
 
+  const ProtectedRoute = ({children}) => {
+    if(!currentUser){
+      return <Navigate to="/login"/>
+    }
+
+    return children
+  }
+
   const router = createBrowserRouter([
     {
       path:"/",
-      element: <Layout/>,
+      element: (
+        <ProtectedRoute>
+          <Layout/>
+        </ProtectedRoute>
+        ),
       children:[
         {
           path:"/",

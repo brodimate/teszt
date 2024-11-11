@@ -1,16 +1,24 @@
+import { useContext } from "react";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../Context/authContext";
 import "./Login.css";
 
 const Login = () => {
+  const {login} = useContext(AuthContext);
+
+  const handleLogin = () => {
+    login();
+  }
+
   return (
     <div className="login">
       <div className="card">
-        <div className="center">
+        <div className="center-login">
           <h1>Login</h1>
-          <form>
+          <form className="login-input">
             <input type="text" placeholder="Username"/>
             <input type="password" placeholder="Password"/>
-            <button>Login</button>
+            <button onClick={handleLogin}>Login</button>
           </form>
           <span>Don't you have an account?</span>
           <Link to="/register">

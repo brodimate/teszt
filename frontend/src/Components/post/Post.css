@@ -1,0 +1,82 @@
+/* Post.css */
+
+/* A fő konténerhez tartozó stílus */
+.post {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-bottom: -20px;
+  max-width: 800px;
+}
+
+/* Felhasználói rész */
+.post .user {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.post .user .user-info {
+  display: flex;
+  align-items: center;
+}
+
+.post .user .user-info img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.post .user .details {
+  display: flex;
+  flex-direction: column;
+}
+
+.post .user .details a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.post .user .details span {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.post .user .details .date {
+  font-size: 12px;
+  color: #888;
+  font-weight: normal;
+}
+
+/* Tartalom rész */
+.post .content {
+  margin-top: 10px;
+}
+
+.post .content p {
+  font-size: 14px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.post .content img {
+  width: 100%;
+  border-radius: 8px;
+  object-fit: cover;
+  max-height: 800px;
+}
+
+/* Információs rész */
+.post .info {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.post .info .locationMark {
+  font-size: 12px;
+  color: #555;
+}

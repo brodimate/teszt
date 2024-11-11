@@ -5,9 +5,9 @@ const Register = () => {
     return (
         <div className="register">
           <div className="card">
-            <div className="center">
+            <div className="center-register">
               <h1>Register</h1>
-              <form>
+              <form className="register-input">
                 <input type="text" placeholder="Username"/>
                 <input type="email" placeholder="Email"/>
                 <input type="password" placeholder="Password"/>
