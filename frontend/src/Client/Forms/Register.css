@@ -75,3 +75,9 @@ button:nth-of-type(2) {
 button:nth-of-type(2):hover {
   background-color: #5a6268;
 }
+
+.error-message {
+  color: red;
+  font-size: 14px;
+  /* Bármilyen más stílus, amit szeretnél alkalmazni */
+}

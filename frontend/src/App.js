@@ -3,7 +3,6 @@ import Register from "./Client/Forms/Register.jsx";
 import {
   createBrowserRouter,
   RouterProvider,
-  Route,
   Outlet,
   Navigate,
 } from "react-router-dom";
@@ -14,12 +13,19 @@ import Home from "./Client/Forms/Home.jsx";
 import Profile from "./Client/Forms/Profile.jsx";
 import { useContext } from "react";
 import { AuthContext } from "./Client/Context/authContext.js";
+import {
+  QueryClient,
+  QueryClientProvider,
+} from '@tanstack/react-query'
 
 function App() {
-  const {currentUser} = useContext(AuthContext);
+  const { currentUser } = useContext(AuthContext);
+
+  const queryClient = new QueryClient()
 
   const Layout = () => {
     return (
+      <QueryClientProvider client={queryClient}>
       <div>
         <NavBar/>
         <div style={{display:"flex"}}>
@@ -30,8 +36,9 @@ function App() {
           <RightBar/>
         </div>
       </div>
-    )
-  }
+    </QueryClientProvider>
+    );
+  };
 
   const ProtectedRoute = ({children}) => {
     if(!currentUser){
